@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* === DEFINISI VARIABEL WARNA (Palet Clean Commerce) === */
+:root {
+    --bg-body: #FFFFFF;       /* Putih Murni */
+    --bg-secondary: #F3F4F6;  /* Abu-abu Muda (Navbar/Section) */
+    --text-main: #1F2937;     /* Abu-abu Gelap (Pengganti Hitam) */
+    --text-muted: #6B7280;    /* Abu-abu Sedang (Deskripsi) */
+    --brand-color: #4F46E5;   /* Indigo (Warna Utama/Link) */
+    --cta-color: #4F46E5;     /* Orange (Tombol Beli) */
+    --cta-hover: #4F46E5;     /* Orange lebih gelap untuk hover */
+}
+
+/* Pastikan body dan html direset total */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Pertahankan reset universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif    ;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+}
+
+/* TYPOGRAPHY */
+h1 { font-size: 2.5rem; font-weight: 700; color: var(--text-main); }
+h2 { font-size: 2.5rem; font-weight: 600; color: var(--text-main); }
+h3 { font-size: 1.4rem; font-weight: 800; color: var(--text-main); }
+h4 { font-size: 1.1rem; font-weight: 600; color: var(--text-main); }
+h5 { font-size: 1rem; font-weight: 400; color: var(--text-main); }
+h6 { color: var(--text-muted); } 
+
+/* NAVIGATION BAR STYLING */
+.navbar {
+    font-size: 16px;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-secondary); /* Update Background */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05); /* Shadow lebih halus */
+    position: relative;
+    display: block;
+    z-index: 100;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding: 0 20px;
+    color: var(--text-main);
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+/* HOVER & ACTIVE STATE */
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--brand-color); /* Ganti Coral dengan Indigo */
+    font-weight: 600;
+}
+
+/* ICON NAVBAR */
+.navbar i {
+    font-size: 1.2rem;
+    padding: 0 7px;
+    cursor: pointer;
+    font-weight: 900;
+    color: var(--text-main);
+    transition: 0.3s ease;
+    color:#000;
+}
+
+.navbar i:hover {
+    color: var(--brand-color); /* Hover icon jadi Indigo */
+}
+
+
+
+/* BUTTON GLOBAL */
+button {
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: var(--cta-color); /* Tombol jadi Orange */
+    color: #fff;
+    padding: 13px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 4px; /* Sedikit lengkungan modern */
+}
+
+button:hover {
+    background-color: var(--cta-hover);
+}
+
+hr {
+    width: 30px;
+    height: 2px;
+    background-color: var(--brand-color); /* Garis aksen jadi Indigo */
+}
+
+.star {
+    padding: 10px 0;
+}
+
+.star i{
+    font-size: 0.8rem;
+    color: #FBBF24; /* Update warna emas bintang agar lebih fresh */
+}
+
+/* HERO SECTION */
+#home {
+    background-image: url("../images/banner.png"); 
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: top center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#home span {
+    color: var(--cta-color) !important; /* Highlight text jadi Orange */
+}
+
+/* NEW ARRIVAL SECTION */
+#new .one {
+    position: relative; 
+}
+
+#new .one img {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#new .one .details{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: 0.3 ease;
+}
+
+#new .one:hover .details {
+    cursor: pointer;
+    /* Ganti overlay jadi warna Indigo transparan */
+    background-color: rgba(79, 70, 229, 0.6); 
+}
+
+#new .one .details button {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-main);
+    background: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--text-main);
+    padding: 2.5px;
+    transform: translateY(70px);
+    transition: 0.3s ease;
+}
+
+#new .one .details button:hover {
+    color: #ffffff;
+    border-color: 1px solid #ffffff;
+}
+
+/* Positioning Details (No Change) */
+#new .one:nth-child(1) .details { display: flex; justify-content: center; align-items: flex-start; flex-direction: column; text-align: start; }
+#new .one:nth-child(2) .details { display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; }
+#new .one:nth-child(3) .details { display: flex; justify-content: center; align-items: flex-end; flex-direction: column; text-align: end; }
+
+/* PRODUCT CARD */
+.product {
+    cursor: pointer;
+    margin-bottom: 2rem;
+    /* Tambahkan border halus ala Clean Commerce */
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.product:hover {
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+}
+
+.product img {
+    transition: 0.3s ease;
+    border-radius: 4px;
+}
+
+.product:hover img {
+    opacity: 0.9;
+}
+
+.product .buy-btn {
+    background: var(--cta-color);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.product:hover .buy-btn { /* Fix selector: harus ada :hover pada parent */
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* BANNER */
+#banner {
+    background-image: url("../images/banner2.png"); 
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: top 70px center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#banner h4 { color: #D8D8D8; }
+#banner h1 { color: #fff; }
+#banner button { background-color: var(--cta-color); }
+
+/* FOOTER */
+footer {
+    /* Menggunakan background gelap untuk kontras di akhir halaman */
+    background-color: #111827; 
+    padding-top: 40px;
+}
+
+footer h5 {
+    color: #F3F4F6;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+footer li { padding-bottom: 4px; }
+
+footer li a {
+    font-size: 0.8rem;
+    color: #9CA3AF;
+    text-decoration: none;
+}
+
+footer li a:hover { color: var(--cta-color); }
+
+footer p {
+    color: #9CA3AF;
+    font-size: 0.8rem;
+}
+
+footer .copyright a {
+    color: #000;
+    width: 38px;
+    height: 38px;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    margin: 0 5px;
+}
+footer .copyright a:hover {
+    background-color: var(--cta-color);
+    color: #fff;
+}
+
+/* CART STYLING */
+#cart-container { overflow-x: auto; }
+#cart-container table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#cart-container table thead { font-weight: 700; }
+
+#cart-container table thead td {
+    background-color: var(--brand-color); /* Header tabel jadi Indigo */
+    color: #fff;
+    border: none;
+    padding: 10px;
+}
+
+#cart-container table td {
+    border: 1px solid #E5E7EB;
+    text-align: center;
+    color: var(--text-main);
+}
+
+/* Ukuran kolom cart tetap sama */
+#cart-container table td.one:nth-child(1) { width: 100px; }
+#cart-container table td.two:nth-child(2),
+#cart-container table td.two:nth-child(3) { width: 200px; }
+#cart-container table td.two:nth-child(4),
+#cart-container table td.two:nth-child(5),
+#cart-container table td.two:nth-child(6) { width: 170px; }
+
+#cart-container table tbody img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+}
+
+#cart-container table tbody i {
+    color: var(--text-muted);
+    cursor: pointer;
+}
+#cart-container table tbody i:hover { color: var(--cta-color); }
+
+#cart-bottom .coupon>div,
+#cart-bottom .total>div {
+    border: 1px solid #E5E7EB;
+    padding: 20px;
+}
+
+#cart-bottom .coupon h5,
+#cart-bottom .total h5 {
+    background: var(--brand-color); /* Judul kupon jadi Indigo */
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-weight: 700;
+}
+
+#cart-bottom .coupon p,
+#cart-bottom .coupon input { padding: 0px 12px; }
+#cart-bottom .coupon input { height: 44px; border: 1px solid #E5E7EB; }
+#cart-bottom .coupon input:focus { outline: 1px solid var(--brand-color); }
+
+#cart-bottom .coupon input,
+#cart-bottom .coupon button { margin: 0 0 20px 12px; }
+
+#cart-bottom .total div>div { padding: 0 12px; }
+#cart-bottom .total h6 { color: var(--text-main); }
+
+.second-hr {
+    background: #E5E7EB;
+    width: 100%;
+    height: 1px;
+}
+
+#cart-bottom .total div>button {
+    margin: 0 12px 20px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+

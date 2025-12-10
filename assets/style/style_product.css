@@ -1,0 +1,45 @@
+/* Menggunakan variabel yang sudah didefinisikan di style_etalase.css */
+/* Pastikan style_etalase.css di-load DULUAN di HTML */
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.sproduct select {
+    display: block;
+    padding: 5px 10px;
+    border: 1px solid #E5E7EB;
+    color: var(--text-main);
+    background-color: #fff;
+    outline: none;
+}
+
+.sproduct input {
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 1px solid #E5E7EB;
+    color: var(--text-main);
+}
+
+.sproduct input:focus {
+    outline: 1px solid var(--brand-color);
+}
+
+.buy-btn {
+    background-color: var(--cta-color); /* Orange */
+    opacity: 1;
+    transition: 0.3s all;
+}
+
+.buy-btn:hover {
+    background-color: var(--cta-hover);
+}

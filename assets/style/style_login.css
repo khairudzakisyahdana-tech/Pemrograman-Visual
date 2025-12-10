@@ -1,0 +1,232 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* WRAPPER UTAMA */
+.login-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* CONTAINER (KOTAK PUTIH) */
+.login-container {
+    background-color: #fff;
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* PANEL KIRI (GAMBAR) */
+.image-panel {
+    flex: 1; /* Mengambil 50% lebar */
+    background-image: url('../images/login.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay Gelap di atas gambar supaya teks terbaca */
+.image-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    color: white;
+}
+
+.image-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.image-content p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+
+/* PANEL KANAN (FORM) */
+.form-panel {
+    flex: 1; /* Mengambil 50% lebar */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Mode Switcher (Pojok Kanan Atas) */
+.mode-switcher {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 0.9rem;
+}
+
+.mode-switcher a {
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 600;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.mode-switcher a.active {
+    color: #4F46E5; /* Warna Utama */
+}
+
+.mode-switcher a:hover {
+    color: #333;
+}
+
+/* Form Content */
+.form-content {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* Input Styling */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-group input:focus {
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+/* Tombol Submit */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #4F46E5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+}
+
+/* Footer Link */
+.footer-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.footer-link a {
+    color: #4F46E5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-link a:hover {
+    text-decoration: underline;
+}
+
+/* Alert Messages */
+.msg-container {
+    margin-bottom: 15px;
+}
+
+.alert {
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.alert-danger {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.alert-success {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+/* RESPONSIVE (Mobile) */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        max-width: 450px;
+    }
+    
+    .image-panel {
+        display: none; /* Sembunyikan gambar di HP biar ringan */
+    }
+    
+    .form-panel {
+        padding: 40px 30px;
+    }
+}
