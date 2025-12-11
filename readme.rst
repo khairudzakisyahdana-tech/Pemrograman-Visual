@@ -1,39 +1,71 @@
-# 🛍️ Novara - Streetwear E-Commerce Platform
+###################
+What is CodeIgniter
+###################
 
-**Novara** adalah aplikasi e-commerce berbasis web yang dibangun menggunakan **CodeIgniter 3**. Proyek ini dirancang untuk menawarkan pengalaman belanja fashion streetwear yang modern, responsif, dan mudah digunakan.
+CodeIgniter is an Application Development Framework - a toolkit - for people
+who build web sites using PHP. Its goal is to enable you to develop projects
+much faster than you could if you were writing code from scratch, by providing
+a rich set of libraries for commonly needed tasks, as well as a simple
+interface and logical structure to access these libraries. CodeIgniter lets
+you creatively focus on your project by minimizing the amount of code needed
+for a given task.
 
-Aplikasi ini berfokus pada alur transaksi pengguna (*User Experience*), mulai dari pemilihan produk, manajemen keranjang belanja berbasis database, hingga simulasi checkout.
+*******************
+Release Information
+*******************
 
-![Novara Screenshot](assets/images/screenshot-home.png)
-*(Ganti link gambar di atas dengan screenshot website kamu)*
+This repo contains in-development code for future releases. To download the
+latest stable release please visit the `CodeIgniter Downloads
+<https://codeigniter.com/download>`_ page.
 
-## 🚀 Fitur Utama
+**************************
+Changelog and New Features
+**************************
 
-### 🔐 User Authentication
-- **Login & Register:** Sistem keamanan menggunakan enkripsi password (`password_hash`).
-- **Session Management:** Validasi akses untuk fitur belanja (hanya member yang bisa beli).
+You can find a list of all changes for each release in the `user
+guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
 
-### 🛒 Shopping Experience
-- **Katalog Produk:** Tampilan Grid responsif dengan Pagination otomatis.
-- **Filter Kategori:** Filter produk berdasarkan kategori (Hoodie, Shoes, T-Shirts).
-- **Detail Produk:** Galeri gambar interaktif dan pemilihan varian ukuran/jumlah.
-- **Related Products:** Rekomendasi produk sejenis di halaman detail.
+*******************
+Server Requirements
+*******************
 
-### 🛍️ Smart Cart System
-- **Database-Driven Cart:** Data keranjang disimpan di database MySQL (bukan session browser), sehingga aman saat pindah perangkat.
-- **Update Quantity:** Mengubah jumlah barang langsung di halaman keranjang.
-- **Voucher/Kupon:** Fitur kode diskon (Contoh: `DISKON10`) dengan kalkulasi otomatis.
-- **Total Calculation:** Perhitungan Subtotal, Diskon, dan Grand Total secara real-time.
+PHP version 5.6 or newer is recommended.
 
-## 🛠️ Teknologi yang Digunakan
+It should work on 5.3.7 as well, but we strongly advise you NOT to run
+such old versions of PHP, because of potential security and performance
+issues, as well as missing features.
 
-- **Backend:** PHP (CodeIgniter 3 Framework)
-- **Frontend:** Bootstrap 5, CSS3, JavaScript
-- **Database:** MySQL
-- **Server:** Apache (XAMPP/WAMP)
+************
+Installation
+************
 
-## 📦 Cara Instalasi
+Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
+of the CodeIgniter User Guide.
 
-1. **Clone Repository**
-   ```bash
-   git clone [https://github.com/username-kamu/novara-ecommerce.git](https://github.com/username-kamu/novara-ecommerce.git)
+*******
+License
+*******
+
+Please see the `license
+agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+
+*********
+Resources
+*********
+
+-  `User Guide <https://codeigniter.com/docs>`_
+-  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
+-  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
+-  `Community Forums <http://forum.codeigniter.com/>`_
+-  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
+-  `Community Slack Channel <https://codeigniterchat.slack.com>`_
+
+Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
+or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+
+***************
+Acknowledgement
+***************
+
+The CodeIgniter team would like to thank EllisLab, all the
+contributors to the CodeIgniter project and you, the CodeIgniter user.
