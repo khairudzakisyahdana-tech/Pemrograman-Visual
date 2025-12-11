@@ -1,71 +1,87 @@
-###################
-What is CodeIgniter
-###################
+<div align="center">
+  <a href="https://github.com/username_kamu/novara">
+    <img src="assets/images/logo1.svg" alt="Logo Novara" width="160" height="auto">
+  </a>
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+  <h1 align="center">NOVARA - Streetwear E-Commerce</h1>
 
-*******************
-Release Information
-*******************
+  <p align="center">
+    <b>Platform E-Commerce Fashion Modern Berbasis Web (MVC)</b>
+    <br />
+    <a href="#-fitur-unggulan">Lihat Fitur</a>
+    ·
+    <a href="#-instalasi">Cara Install</a>
+    ·
+    <a href="#-screenshoot">Lihat Demo</a>
+  </p>
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+  <p align="center">
+    <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+    <img src="https://img.shields.io/badge/CodeIgniter-EF4223?style=for-the-badge&logo=codeigniter&logoColor=white" alt="CodeIgniter" />
+    <img src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+    <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  </p>
+</div>
 
-**************************
-Changelog and New Features
-**************************
+<br />
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+## 📖 Tentang Proyek
 
-*******************
-Server Requirements
-*******************
+**Novara** adalah aplikasi *e-commerce* yang dirancang untuk mempermudah transaksi jual-beli produk *streetwear* (Hoodie, Sepatu, T-Shirt). Dibangun di atas framework **CodeIgniter 3**, aplikasi ini menerapkan arsitektur **MVC (Model-View-Controller)** yang rapi dan terstruktur.
 
-PHP version 5.6 or newer is recommended.
+Fokus utama pengembangan adalah pada **User Experience (UX)** dan **Integritas Data**, di mana sistem keranjang belanja (*Shopping Cart*) disimpan langsung ke dalam database untuk mencegah kehilangan data pesanan.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+---
 
-************
-Installation
-************
+## 🚀 Fitur Unggulan
 
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
+Berikut adalah fitur-fitur kunci yang telah diimplementasikan:
 
-*******
-License
-*******
+### 🛒 Sistem Belanja Cerdas
+- [x] **Database-Driven Cart:** Keranjang belanja disimpan di database MySQL (Persistent), bukan sesi browser sementara.
+- [x] **Smart Quantity Update:** User dapat mengubah jumlah barang langsung di halaman Cart dengan update harga otomatis.
+- [x] **Kupon Diskon:** Fitur kode voucher (Contoh: `DISKON10`) yang memotong total harga secara *real-time*.
+- [x] **Kalkulasi Otomatis:** Menghitung Subtotal, Diskon, dan Grand Total secara presisi.
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+### 🔐 Keamanan & Autentikasi
+- [x] **Secure Login/Register:** Password dienkripsi menggunakan algoritma `password_hash` (Bcrypt).
+- [x] **Session Protection:** Halaman transaksi (Cart/Checkout) terkunci untuk pengguna yang belum login (Redirect System).
+- [x] **Validasi Input:** Mencegah input kosong atau format data yang salah.
 
-*********
-Resources
-*********
+### 🎨 Antarmuka (UI/UX)
+- [x] **Responsive Design:** Tampilan optimal di Desktop, Tablet, dan Mobile menggunakan Bootstrap 5.
+- [x] **Interactive Gallery:** Fitur ganti gambar utama produk saat thumbnail diklik (DOM Manipulation).
+- [x] **Filter Kategori:** Navigasi cepat untuk memfilter produk berdasarkan jenis (Hoodie, Shoes, dll).
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
+---
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+## 📸 Screenshots
 
-***************
-Acknowledgement
-***************
+Berikut adalah tampilan antarmuka aplikasi Novara:
 
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+| **Halaman Utama (Home)** | **Detail Produk** |
+|:---:|:---:|
+| <img src="assets/images/foto-home.png" alt="Home Page" width="100%"> | <img src="assets/images/foto-detail.png" alt="Product Detail" width="100%"> |
+| *Banner Promosi & Produk Unggulan* | *Galeri Gambar & Pilihan Varian* |
+
+| **Keranjang Belanja (Cart)** | **Halaman Login** |
+|:---:|:---:|
+| <img src="assets/images/foto-cart.png" alt="Shopping Cart" width="100%"> | <img src="assets/images/foto-login.png" alt="Login Page" width="100%"> |
+| *Manajemen Item, Update Qty & Kupon* | *Desain Split-Screen Modern* |
+
+---
+
+## ⚙️ Instalasi & Penggunaan
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer lokal (Localhost):
+
+### 1. Persiapan Lingkungan
+Pastikan Anda sudah menginstall aplikasi berikut:
+* **XAMPP** (atau WAMP/Laragon) dengan PHP versi 7.4 atau 8.0.
+* **Git** (Opsional, untuk clone).
+* **Web Browser** (Chrome/Edge/Firefox).
+
+### 2. Clone Repository
+Buka terminal atau CMD, arahkan ke folder `htdocs`, lalu jalankan:
+```bash
+git clone [https://github.com/khairudzakisyahdana-tech/Pemrograman-Visual](https://github.com/khairudzakisyahdana-tech/Pemrograman-Visual.git)
