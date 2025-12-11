@@ -77,7 +77,7 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer lokal (Lo
 
 ### 1. Persiapan Lingkungan
 Pastikan Anda sudah menginstall aplikasi berikut:
-* **XAMPP** (atau WAMP/Laragon) dengan PHP versi 7.3.
+* **XAMPP** (atau WAMP/Laragon) dengan PHP versi 5.3.
 * **Git** (Opsional, untuk clone).
 * **Web Browser** (Chrome/Edge/Firefox).
 
